@@ -1,0 +1,7 @@
+<% if @student.active %>
+  <%= @student.active = false %>
+  <%= redirect_to student_path(@student), notice: "You are now set to inactive!" %>
+<% else %>
+  <%= @student.active = true %>
+  <%= redirect_to student_path(@student), notice: "You are now set to active!" %>
+<% end %>
